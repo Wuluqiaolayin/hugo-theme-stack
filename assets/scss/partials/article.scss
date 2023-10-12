@@ -76,13 +76,15 @@
 .article-subtitle {
     font-weight: normal;
     color: var(--card-text-color-secondary);
+    margin: 5px 0;
     line-height: 1.5;
-    margin: 0;
-    font-size: 1.75rem;
+
+    font-size: 1.75rem; //改为1.5rem 应该是全局
     @include respond(xl) {
-        font-size: 2rem;
+        font-size: 2rem; //改为1.5rem 应该是大尺寸屏幕适应？
     }
 }
+
 
 .article-title-wrapper {
     display: flex;
