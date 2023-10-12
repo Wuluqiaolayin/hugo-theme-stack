@@ -3,22 +3,19 @@
     margin-right: auto;
 
     .left-sidebar {
-        order: -3;
-        // max-width: var(--left-sidebar-max-width);
-        max-width: 10%;
+        max-width: var(--left-sidebar-max-width);
+        margin-right: 1%;
     }
 
     .right-sidebar {
-        order: -1;
-        // max-width: var(--right-sidebar-max-width);
-        max-width: 20%;
+        max-width: var(--right-sidebar-max-width);
 
         /// Display right sidebar when min-width: lg
         @include respond(lg) {
-            display: flex;
+            display: block;
         }
     }
-    
+
     &.extended {
         @include respond(md) {
             max-width: 1024px;
@@ -31,10 +28,9 @@
             --left-sidebar-max-width: 20%;
             --right-sidebar-max-width: 30%;
         }
-        // 根据服务器上的分辨率来定
+
         @include respond(xl) {
-            // max-width: 1536px;
-            max-width: 1900px;
+            max-width: 1536px;
             --left-sidebar-max-width: 15%;
             --right-sidebar-max-width: 25%;
         }
